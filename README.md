@@ -1,18 +1,4 @@
-
-# Sumário
-
-[Eduardo R. B. Marques](https://www.dcc.fc.up.pt/~edrdo/), DCC/FCUP
-
-Aplicação Python demonstrando o acesso à BD MovieStream
-
-#  Referência
-
-- [PyMySQL](https://pymysql.readthedocs.io/)
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [Jinja templates](https://jinja.palletsprojects.com/en/3.0.x/)
-
-
-# Instalação de dependências
+Este projeto foi desenvolvido no âmbito da unidade curricular 'Bases de Dados' e implementa uma aplicação web sobre uma base de dados relacional das instituições de ensino superior portuguesas.
 
 ## Python 3 e pip 
 
