@@ -7,7 +7,7 @@ Deve ter o Python 3, o gestor de pacotes pip instalado e a biblioteca flask. Pod
 
 Edite o ficheiro ```db.py``` no que se refere à configuração da sua BD, modificando os parâmetros DB (nome da base de dados), USER (nome do utilizador) e PASSWORD (senha do utilizador).
 
-# Execução
+
 
 Inicie a aplicação executando ```python3 server.py``` e interaja com a mesma
 abrindo uma janela no seu browser  com o endereço [__http://localhost:9001/__](http://localhost:9001/) 
