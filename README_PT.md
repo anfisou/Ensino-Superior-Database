@@ -1,4 +1,4 @@
-Este projeto foi desenvolvido no âmbito da unidade curricular 'Bases de Dados' pelos alunos André Sousa (eu) e [Paulo Silva](https://github.com/Panda-Hacks) e implementa uma aplicação web sobre uma base de dados relacional das instituições de ensino superior portuguesas.
+Este projeto foi desenvolvido no âmbito da unidade curricular 'Bases de Dados' pelos alunos [André Sousa](https://github.com/anfisou) e [Paulo Silva](https://github.com/Panda-Hacks) e implementa uma aplicação web sobre uma base de dados relacional das instituições de ensino superior portuguesas.
 
 
 Deve ter o Python 3, o gestor de pacotes pip instalado e a biblioteca flask. Pode instalar os mesmos usando:
