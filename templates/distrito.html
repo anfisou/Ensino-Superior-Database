@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{{ distrito.DistritoNome }} {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h2>Distrito info</h2>
+  <p>
+    <b>DistritoId: </b>{{ distrito.DistritoId }}
+  </p>
+  <p>
+    <b>Nome: </b>{{ distrito.DistritoNome }}
+  </p>
+  <p>
+    <b>Região: </b>{{ distrito.Regiao }}
+  </p>
+  {% if size!=0 %}
+  <p>
+    <b>Universidades: </b><ul>
+    {% for u in universidades %}      
+      <li><a href="/universidades/{{ u.UniversidadeId }}">{{ u.UniversidadeNome }} </a></li>
+    {% endfor %}
+    </ul>
+  </p>
+  {% endif%}
+{% endblock %}

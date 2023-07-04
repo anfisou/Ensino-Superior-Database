@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}EnsinoSuperior database {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<h2>About</h2>
+<p>This web application illustrates the use of the MovieStream
+database. The application is built using 
+<a href="https://pymysql.readthedocs.io/">PyMySQL</a>,
+<a href="https://flask.palletsprojects.com">Flask</a>, and
+<a href="https://jinja.palletsprojects.com">Jinja</a>.
+</p>
+
+<h2>Some database statistics</h2>
+<table>
+<tr>
+  <th>Items</th>
+  <th>Count</th>
+</tr>
+<tr>
+  <td>Universidades</td>
+  <td>{{stats.universidades }}</td>
+</tr>
+<tr>
+  <td>Faculdades</td>
+  <td>{{stats.faculdades }}</td>
+</tr>
+<tr>
+  <td>Cursos</td>
+  <td>{{stats.cursos }}</td>
+</tr>
+<tr>
+  <td>Reitores</td>
+  <td>{{stats.reitores }}</td>
+</tr>
+<tr>
+  <td>Distritos</td>
+  <td>{{stats.distritos }}</td>
+</tr>
+</table>
+
+
+<h2>Sample functionality</h2>
+
+<h3>Universidades</h3>
+<p>
+   <a href="/universidades">List all</a>
+</p>
+<p>Get universidade info:
+<form name="mid" action="javascript:window.open('/universidades/'+document.forms['mid'].elements['id'].value,'_self')">
+   Universidade Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+  
+<p>Search by name:
+<form name="msearch" action="javascript:window.open('/universidades/search/'+document.forms['msearch'].elements['expr'].value,'_self')">
+  <input name="expr" id="expr" value="Universidade do Porto" required/>
+  <input type="submit" value="search"/>
+</form>
+</p>
+
+<h3>Faculdades</h3>
+<p>
+   <a href="/faculdades">List all</a>
+</p>
+<p>Get faculdade info:
+<form name="aid" action="javascript:window.open('/faculdades/'+document.forms['aid'].elements['id'].value,'_self')">
+   Faculdade Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+  
+<p>Search by name 
+  <form name="asearch" action="javascript:window.open('/faculdades/search/'+document.forms['asearch'].elements['expr'].value,'_self')">
+    <input name="expr" id="expr" value="Faculdade de Ciências" required/>
+    <input type="submit" value="search"/>
+  </form>
+</p>
+
+<h3>Cursos</h3>
+<p>
+   <a href="/cursos">List all</a>
+</p>
+
+<p>Get curso info:
+<form name="gid" action="javascript:window.open('/cursos/'+document.forms['gid'].elements['id'].value,'_self')">
+   Curso Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+
+<p>Search by name 
+    <form name="psearch" action="javascript:window.open('/cursos/search/'+document.forms['psearch'].elements['expr'].value,'_self')">
+      <input name="expr" id="expr" value="Ciência de Computadores" required/>
+      <input type="submit" value="search"/>
+    </form>
+  </p>
+
+<h3>Distritos</h3>
+<p>
+   <a href="/distritos">List all</a>
+</p>
+  
+<p>Get distrito info:
+<form name="gid" action="javascript:window.open('/distritos/'+document.forms['gid'].elements['id'].value,'_self')">
+   Distrito Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+  
+<p>Search by name 
+    <form name="dsearch" action="javascript:window.open('/distritos/search/'+document.forms['dsearch'].elements['expr'].value,'_self')">
+      <input name="expr" id="expr" value="Porto" required/>
+      <input type="submit" value="search"/>
+    </form>
+  </p>
+
+<h3>Reitores</h3>
+<p>
+   <a href="/reitor">List all</a>
+</p>
+  
+<p>Get reitor info:
+<form name="gid" action="javascript:window.open('/reitor/'+document.forms['gid'].elements['id'].value,'_self')">
+   Reitor Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+  
+<p>Search by name 
+    <form name="rsearch" action="javascript:window.open('/reitor/search/'+document.forms['rsearch'].elements['expr'].value,'_self')">
+      <input name="expr" id="expr" value="António Pereira" required/>
+      <input type="submit" value="search"/>
+    </form>
+  </p>
+
+{% endblock %}

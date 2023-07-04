@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{{ reitor.ReitorNome }} {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h2>Reitor info</h2>
+  <p>
+    <b>ReitorId: </b>{{ reitor.ReitorId }}
+  </p>
+  <p>
+    <b>Nome: </b>{{ reitor.ReitorNome }}
+  </p>
+  <p>
+    <b>Sexo: </b>{{ reitor.Sexo }}
+  </p>
+  <p>
+    <b>Universidade: </b><a href="/universidades/{{ universidade.UniversidadeId }}">{{ universidade.UniversidadeNome }} </a>
+  </p>
+{% endblock %}

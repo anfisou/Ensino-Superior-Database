@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{{ curso.CursoNome }} em {{faculdade.FaculdadeNome}}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h2>Curso e Faculdade info</h2>
+  {% if curso_faculdade.NumeroTotalIsncritos != 0 %}
+  <p>
+    <b>Número de Inscritos: </b>{{ curso_faculdade.NumeroTotalInscritos }}
+  </p>
+  {% endif %}
+  {% if curso_faculdade.MediaFinal != 0 %}
+  <p>
+    <b>Média Final: </b>{{ curso_faculdade.MediaFinal}}
+  </p>
+  {% endif %}
+  {% if curso_faculdade.Idade24Menos != 0 or curso_faculdade.Idade25Mais != 0 %}
+  <p>
+    <b>Número de Inscritos com idade igual ou inferior a 24 anos: </b>{{ curso_faculdade.Idade24Menos }}
+  </p>
+  <p>
+    <b>Número de Inscritos com idade igual ou superior a 25 anos: </b>{{ curso_faculdade.Idade25Mais }}
+  </p>
+  {% endif %}
+  {% if curso_faculdade.NumeroHomens != 0 or curso_faculdade.NumeroMulheres != 0 %}
+  <p>
+    <b>Número de Homens Inscritos: </b>{{ curso_faculdade.NumeroHomens }}
+  </p>
+  <p>
+    <b>Número de Mulheres Inscritas: </b>{{ curso_faculdade.NumeroMulheres }}
+  </p>
+  {% endif %}
+  <p>
+    <b>Faculdade: </b><a href="/faculdades/{{ faculdade.FaculdadeId }}">{{ faculdade.FaculdadeNome }} </a>
+  </p>
+  <p>
+    <b>Curso: </b><a href="/cursos/{{ curso.CursoId }}">{{ curso.CursoNome}} </a>
+  </p>
+{% endblock %}

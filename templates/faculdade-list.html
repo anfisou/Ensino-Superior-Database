@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Faculdades{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <table> 
+  <tr>
+    <th><b>Id</b></th>
+    <th><b>Nome</b></th>
+    <th><b>Universidade</b></th>
+    <th><b>TipoEnsino</b></th>
+    <th><b>Natureza</b></th>
+   </tr>
+   
+  {% for f in faculdades %}
+    <tr>
+      <td><a href="/faculdades/{{ f.FaculdadeId }}">{{f.FaculdadeId }}</a></td>
+      <td>{{ f.FaculdadeNome }}</td>
+      <td>{{ f.UniversidadeNome }}</td>
+      <td>{{ f.TipoEnsino }}</td>
+      <td>{{ f.Natureza }}</td>
+    </tr>
+  {% endfor %}
+  </table>
+{% endblock %}
