@@ -5,9 +5,9 @@ import re
 
 # Change this if necessary
 CONFIG = {
-  'DB': 'mestrados',
-  'USER': 'root',
-  'PASSWORD': 'Gaia2003*FC',
+  'DB': '#change this',
+  'USER': '#change this',
+  'PASSWORD': '#change this',
   'HOST': 'localhost',
   'PORT': 3306,
   'CHARSET': 'utf8'
