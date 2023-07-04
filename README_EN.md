@@ -1,4 +1,4 @@
-This project was developed for the subject 'Databases' by the students André Sousa (me) and [Paulo Silva](https://github.com/Panda-Hacks) and implements a web app on top of a relational database about portuguese universities.
+This project was developed for the subject 'Databases' by the students [André Sousa](https://github.com/anfisou) and [Paulo Silva](https://github.com/Panda-Hacks) and implements a web app on top of a relational database about portuguese universities.
 
 You need Python 3, a installed pip package manager and a Flask library. You can install them using:
 
